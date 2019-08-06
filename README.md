@@ -40,7 +40,8 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
-Give the example
+npm install 
+
 ```
 
 And repeat
@@ -60,7 +61,7 @@ Explain how to run the automated tests for this system
 Explain what these tests test and why
 
 ```
-Give an example
+npm test 
 ```
 
 ### And coding style tests
@@ -77,9 +78,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-*
-*
-*
+* tensorflow.js
+* brain.js
+* mocha 
 
 ## Contributing
 
@@ -91,9 +92,9 @@ Please read [CONTRIBUTING.md]() for details on our code of conduct, and the proc
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Loai abdalslam* - *Initial work* - [PurpleBooth](https://github.com/loaiabdalslam)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/loaiabdalslam/ANN.js/contributors) who participated in this project.
 
 ## License
 
