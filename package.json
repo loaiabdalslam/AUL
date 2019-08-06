@@ -1,0 +1,30 @@
+{
+  "name": "fastneural",
+  "version": "1.0.0",
+  "description": "automated DeepLearning Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loaiabdalslam/FastNeural.git"
+  },
+  "keywords": [
+    "deeplearning",
+    "automl",
+    "javascipt",
+    "machinelearning"
+  ],
+  "author": "loaiabdalslam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/loaiabdalslam/FastNeural/issues"
+  },
+  "homepage": "https://github.com/loaiabdalslam/FastNeural#readme",
+  "dependencies": {
+    "@tensorflow/tfjs": "^1.2.5",
+    "brain.js": "^1.6.1",
+    "mocha": "^6.2.0"
+  }
+}
