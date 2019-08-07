@@ -78,9 +78,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* tensorflow.js
-* brain.js
-* mocha 
+* tensorflow.js 
+* brain.js 
+* mocha unittest
 
 ## Contributing
 
@@ -88,11 +88,11 @@ Please read [CONTRIBUTING.md]() for details on our code of conduct, and the proc
 
 ## Versioning
 
-
+0.0.0
 
 ## Authors
 
-* **Loai abdalslam* - *Initial work* - [PurpleBooth](https://github.com/loaiabdalslam)
+**Loai abdalslam* - *Initial work* - [Loai abdalslam](https://github.com/loaiabdalslam)
 
 See also the list of [contributors](https://github.com/loaiabdalslam/ANN.js/contributors) who participated in this project.
 
@@ -102,6 +102,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* [Read more about automated machine learning ](https://github.com/hibayesian/awesome-automl-papers)
+* [Automated Machine Learning Topic ](https://www.google.com/search?q=automated+machine+learing+papers&oq=automated+machine+learing+papers&aqs=chrome..69i57j0l5.5021j0j9&sourceid=chrome&ie=UTF-8)
