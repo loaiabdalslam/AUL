@@ -1,6 +1,6 @@
 /**
- * TODO:  Create Bag of modules (Done) 
- * 
+ * TODO:  Create Bag of modules (Done)
+ *
  * */
 
 
@@ -10,18 +10,17 @@ const brain = require('brain.js');
 module.exports = {
 
 
-  bagOfBrains: function (data, neuralConfig, trainConfigs) {
-    // init a brain network with alot of automated confings 
-    if (trainConfigs.length !== 0 || trainConfigs !== undefined) {
-      this.trainConfigs = trainConfigs
-      this.neuralConfig = neuralConfig
+  bagOfBrains: function (data, config) {
+    // init a brain network with alot of automated confings
+    if (config.length !== 0 || config !== undefined) {
+      this.config = config
       this.data = data
       this.networkSpace = [];
 
       // Here we have a Bag of Neural Networks
       this.initBag = () => {
-        return this.trainConfigs.map((item) => {
-          return new brain.NeuralNetwork(this.neuralConfig)
+        return this.config.map((item,index) => {
+          return new brain.NeuralNetwork(this.config[index].neuralConfig)
         });
       }
 
@@ -33,16 +32,16 @@ module.exports = {
 
       /*
       Here we try to make a Bag of Trained Neural Networks and Just Return Results
-  
+
       - First get all Init Bag (Networks).
-      - Then add the trained networks to networkSpace and save networks results to function output 
-      
+      - Then add the trained networks to networkSpace and save networks results to function output
+
       */
       this.trainningBag = () => {
         const networks = this.initBag()
 
         const results = networks.map((network, index) => {
-          let networkResults = network.train(this.data, this.trainConfigs[index])
+          let networkResults = network.train(this.data, this.config[index].trainingConfig)
           this.networkSpace.push(network)
           return networkResults
         })

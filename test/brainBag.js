@@ -1,7 +1,7 @@
 const assert = require('assert');
 const brain = require('brain.js');
 const { bagOfBrains } = require('../auto-lab/init');
-const config = {
+const neuralConfig = {
   binaryThresh: 0.5,
   hiddenLayers: [3],     // array of ints for the sizes of the hidden layers in the network
   activation: 'sigmoid',  // supported activation types: ['sigmoid', 'relu', 'leaky-relu', 'tanh'],
@@ -27,11 +27,11 @@ const data = [{input: { r: 0.03, g: 0.7, b: 0.5 }, output: { black: 1 }},
 describe('inialize Bags', function() {
   describe('initBrainTesting', function() {
     it('inialize Automated Neural Network without anyerror', function() {
-      let ANN = new bagOfBrains(data,config,[trainingConfig,trainingConfig,trainingConfig])
+      let ANN = new bagOfBrains(data,[{neuralConfig:neuralConfig,trainingConfig:trainingConfig},{neuralConfig:neuralConfig,trainingConfig:trainingConfig}])
     });
 
     it('Fire TrainingBag Function is That Run !', function() {
-      let ANN = new bagOfBrains(data,config,[trainingConfig,trainingConfig,trainingConfig])
+      let ANN = new bagOfBrains(data,[{neuralConfig:neuralConfig,trainingConfig:trainingConfig},{neuralConfig:neuralConfig,trainingConfig:trainingConfig}])
       ANN.trainningBag().then((results)=>{
         console.log('output:',ANN.getNetwork(1).run({ r: 1, g: 0.4, b: 0 })) // The Right One is White
         // console.log(ANN.networks)
