@@ -41,7 +41,8 @@ module.exports = {
         const networks = this.initBag()
 
         const results = networks.map((network, index) => {
-          let networkResults = network.train(this.data, this.config[index].trainingConfig)
+          let networkResults = network.trainAsync(this.data, this.config[index].trainingConfig)
+
           this.networkSpace.push(network)
           return networkResults
         })
