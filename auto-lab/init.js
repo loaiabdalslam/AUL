@@ -38,13 +38,17 @@ module.exports = {
 
       */
       this.trainningBag = () => {
+
         const networks = this.initBag()
 
         const results = networks.map((network, index) => {
+
           let networkResults = network.trainAsync(this.data, this.config[index].trainingConfig)
 
           this.networkSpace.push(network)
+
           return networkResults
+
         })
 
         return Promise.all(results)
@@ -57,7 +61,7 @@ module.exports = {
               results,
             ]
           }).catch((error) => {
-            console.log(error)
+            // console.log(error)
           })
       }
 
