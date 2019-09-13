@@ -3,6 +3,8 @@ var expect = require('expect.js');
 const brain = require('brain.js');
 const { bagOfBrains } = require('../auto-lab/init');
 const { argMax } = require('../well-cleaner/tensors-cleaner')
+const { TrainingLog } = require('../log-lab/deep-log')
+
 
 const neuralConfig = {
   binaryThresh: 0.5,
@@ -14,7 +16,7 @@ const trainingConfig = {
   // Defaults values --> expected validation
 iterations: 2000,    // the maximum times to iterate the training data --> number greater than 0
 errorThresh: 0.005,   // the acceptable error percentage from training data --> number between 0 and 1
-log: false,           // true to use console.log, when a function is supplied it is used --> Either true or a function
+log: log =>TrainingLog(log,'./log-lab','training'),           // true to use console.log, when a function is supplied it is used --> Either true or a function
 logPeriod: 10,        // iterations between logging out --> number greater than 0
 learningRate: 0.3,    // scales with delta to effect training rate --> number between 0 and 1
 momentum: 0.1,        // scales with next layer's change value --> number between 0 and 1
