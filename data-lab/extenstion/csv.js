@@ -8,9 +8,9 @@ module.exports = {
       return  jsonArray
     }else if (jsonConfig.type == 'request') {
       console.log(jsonConfig.path)
-      const  data = await csv(csvConfig)
+        const  jsonArray = await csv(csvConfig)
       .fromStream(request.get(jsonConfig.path))
-      return data
+      return jsonArray
     }
 
   }
