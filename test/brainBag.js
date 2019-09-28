@@ -56,7 +56,7 @@ describe('inialize Bags', function() {
       })
 
     });
-    
+
 
 
 
@@ -67,7 +67,7 @@ describe('inialize Bags', function() {
         let NNLow = ANN.getNetwork(0).run({ r: 1, g: 0.4, b: 0 })
         let LowAcc = NNLow[argMax(NNLow)]
 
-        // Transfer Learning Method , first nn weights its equal the second one 
+        // Transfer Learning Method , first nn weights its equal the second one
         ANN.getNetwork(0).weights = ANN.getNetwork(1).weights
 
 
@@ -77,8 +77,8 @@ describe('inialize Bags', function() {
         assert.strictEqual(argMax(NNLow),argMax(NNHigh))
 
         // Todo : Assert if LowAcc is lower than HighACC if true , transefer Weights learning PASSED
-        console.log(`Before : ${LowAcc} \n After: ${HighAcc}`)
-       
+        console.log(`Before Transefer Learning: ${LowAcc} \n After Transefer Learning: ${HighAcc}`)
+
       }).catch((err)=>{
         console.log(err)
       })
