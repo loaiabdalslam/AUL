@@ -1,5 +1,5 @@
 const assert = require('assert');
-var expect = require('expect.js');
+const expect = require('expect.js');
 const brain = require('brain.js');
 const { bagOfBrains } = require('../auto-lab/init');
 const { argMax } = require('../well-cleaner/tensors-cleaner')
