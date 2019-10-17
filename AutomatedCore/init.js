@@ -1,11 +1,5 @@
-/**
- * TODO:  Create Bag of modules (Done)
- *
- * */
-
 
 const brain = require('brain.js');
-
 
 module.exports = {
 
